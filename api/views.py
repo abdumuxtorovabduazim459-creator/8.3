@@ -5,7 +5,6 @@ from .models import Genre, Book
 from .serializers import GenreSerializer, BookSerializer
 
 
-# Janrlar
 class GenreListCreateAPIView(ListCreateAPIView):
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
@@ -16,7 +15,6 @@ class GenreRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     serializer_class = GenreSerializer
 
 
-# Kitoblar
 class BookListCreateAPIView(ListCreateAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
@@ -27,7 +25,6 @@ class BookRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     serializer_class = BookSerializer
 
 
-# Bitta janrdagi kitoblar
 class GenreBooksAPIView(ListAPIView):
     serializer_class = BookSerializer
 
